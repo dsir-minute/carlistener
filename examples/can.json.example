@@ -1,0 +1,127 @@
+{
+  "messages": {
+    "0xabcde": {
+      "signals": {
+        "Birthday": {
+          "generic_name": "LongBirthday",
+          "bit_start": 0,
+          "bit_size": 8,
+          "send_same": true
+        }
+      }
+    },
+    "0x138": {
+      "signals": {
+        "Birthday": {
+          "generic_name": "MyBirthday",
+          "bit_start": 0,
+          "bit_size": 8,
+          "send_same": true
+        }
+      }
+    },
+    "0x108": {
+      "signals": {
+        "Birthday": {
+          "generic_name": "HerBirthday",
+          "bit_start": 0,
+          "bit_size": 8,
+          "send_same": true
+        }
+      }
+    },
+    "0x284": {
+      "signals": {
+        "Speed": {
+          "generic_name": "Speed",
+          "bit_start": 0,
+          "bit_size": 8,
+          "max_frequency": 0,
+          "force_send_changed": true,
+          "send_same" : false
+        }
+      }
+    },
+    "0x2b1": {
+      "signals": {
+        "CC_Status": {
+          "generic_name": "Status",
+          "bit_start": 0,
+          "bit_size": 2,
+          "send_same": false,
+          "max_frequency": 2,
+          "force_send_changed": false,
+          "states": {
+            "Off" : [0],
+            "On"  : [1],
+            "UNK"  : [2,3]
+          }
+        },
+        "Set_indicator": {
+          "generic_name": "Indicator",
+          "bit_start": 2,
+          "bit_size": 1,
+          "decoder": "booleanDecoder",
+          "send_same": false
+        },
+        "Distance": {
+          "generic_name": "Distance",
+          "bit_start": 4,
+          "bit_size": 2,
+          "send_same": false,
+          "states": {
+            "Short"   : [1],
+            "Medium"  : [2],
+            "Long"  :   [3]
+          }
+        },
+        "CC_Mode": {
+          "generic_name": "Mode",
+          "bit_start": 7,
+          "bit_size": 1,
+          "send_same": false
+        },
+        "Blind_Spot_Left": {
+          "generic_name": "Blind_Left",
+          "bit_start": 12,
+          "bit_size": 1,
+          "send_same": false
+        },
+        "Blind_Spot_Right": {
+          "generic_name": "Blind_Right",
+          "bit_start": 13,
+          "bit_size": 1,
+          "send_same": false
+        },
+        "Speed?": {
+          "generic_name": "Speed1",
+          "bit_start": 6,
+          "bit_size": 1,
+          "send_same": false
+        },
+        "Set_Speed?": {
+          "generic_name": "Speed2",
+          "bit_start": 32,
+          "bit_size": 8,
+          "send_same": false
+        },
+        "Set_Speed_Action?": {
+          "generic_name": "Speed3",
+          "bit_start": 44,
+          "bit_size": 1,
+          "send_same": false
+        }
+      }
+    },
+    "0x35d": {
+      "signals": {
+        "Close_Active_Brake_Switch": {
+          "generic_name": "Brake",
+          "bit_start": 34,
+          "bit_size": 2,
+          "send_same": false
+        }
+      }
+    }
+  }
+}

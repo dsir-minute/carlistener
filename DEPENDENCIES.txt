@@ -1,0 +1,16 @@
+# PYTHON PACKAGES
+gps              
+autobahn        
+protobuf       
+dateutil     
+bluez            
+
+# PIP PACKAGES
+paho            
+pyusb          
+
+# On Debian you can run:
+sudo apt-get install python-gps python-autobahn python-protobuf.socketrpc python-dateutil python-bluez pip
+apt-get remove --purge python-usb
+pip install paho-mqtt
+pip install pyusb

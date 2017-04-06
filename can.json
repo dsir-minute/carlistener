@@ -1,0 +1,35 @@
+{
+  "max_frequency": 2,
+  "force_send_changed": false,
+  "messages": {
+    "0x573": {
+      "max_frequency": 1,
+      "signals": {
+        "DistanceTotalizer": {
+          "generic_name": "mileage",
+          "bit_start": 0,
+          "bit_size": 28,
+          "factor": 0.01,
+          "send_same": false 
+        }
+      }
+    },
+    "0x44E": {
+      "signals": {
+        "FuelTank": {
+          "generic_name": "fuelLeft",
+          "bit_start": 33,
+          "bit_size": 7,
+          "send_same": false
+        },
+	"ExternalTempDisplayValue": {
+          "generic_name": "outTemp",
+          "bit_start": 48,
+          "bit_size": 8,
+          "offset": -40,
+          "send_same": false
+	}	
+      }
+    }
+  }
+}

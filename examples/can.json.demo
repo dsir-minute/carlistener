@@ -1,0 +1,21 @@
+{
+  "messages": {
+    "0x597": {
+      "max_frequency": 1,
+      "force_send_changed": false,
+      "signals": {
+        "Speed": {
+          "generic_name": "Speed",
+          "bit_start": 0,
+          "bit_size": 8  
+        },
+        "RPM" :{
+          "generic_name": "RPM",
+          "bit_start": 8,
+          "bit_size": 8,
+	  "factor" : 500
+	}
+      }
+    }
+  }
+}

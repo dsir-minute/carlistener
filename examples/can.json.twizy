@@ -1,0 +1,228 @@
+{
+  "max_frequency": 2,
+  "force_send_changed": false,
+  "messages": {
+    "0x5D7": {
+      "max_frequency": 1,
+      "signals": {
+        "VehicleSpeed": {
+          "generic_name": "speed_kph",
+          "bit_start": 8,
+          "bit_size": 16,
+          "factor": 0.01,
+          "send_same": true 
+        }
+      }
+    },
+    "0x59B": {
+      "signals": {
+        "RawPedal": {
+          "generic_name": "acceleratorPedalPercentage",
+          "bit_start": 24,
+          "bit_size": 8,
+          "factor": 0.3968,
+          "send_same": false
+        },
+        "RST_BrakeInfoStatus": {
+          "generic_name": "brakePedalStatus",
+          "bit_start": 14,
+          "bit_size": 2,
+          "states": {
+            "Not Pressed" : [0],
+            "Pressed"  : [1],
+            "Firmly Pressed"  : [2],
+            "INVALID" : [3]
+          },
+          "send_same": false
+        },
+        "RST_InstantPEBPower": {
+          "generic_name": "instantPowerPercentage",
+          "bit_start": 16,
+          "bit_size": 8,
+          "offset": -100,
+          "send_same": false
+        },
+        "RST_Drive_TelltaleState": {
+          "generic_name": "drive",
+          "bit_start": 0,
+          "bit_size": 2,
+          "states": {
+            "Off" : [0],
+            "Blink"  : [1],
+            "On"  : [2],
+            "UNAVAILABLE" : [3]
+          },
+          "force_send_changed": true,
+          "send_same": false
+        },
+        "RST_Neutral_TelltaleState": {
+          "generic_name": "neutral",
+          "bit_start": 2,
+          "bit_size": 2,
+          "states": {
+            "Off" : [0],
+            "Blink"  : [1],
+            "On"  : [2],
+            "UNAVAILABLE" : [3]
+          },
+          "force_send_changed": true,
+          "send_same": false
+        },
+        "RST_Reverse_TelltaleState": {
+          "generic_name": "reverse",
+          "bit_start": 4,
+          "bit_size": 2,
+          "states": {
+            "Off" : [0],
+            "Blink"  : [1],
+            "On"  : [2],
+            "UNAVAILABLE" : [3]
+          },
+          "force_send_changed": true,
+          "send_same": false
+        }
+      }
+    },
+    "0x155": {
+      "signals": {
+        "UserSOC": {
+          "generic_name": "batteryPercentage",
+          "bit_start": 32,
+          "bit_size": 13,
+          "factor": 0.02,
+          "send_same": false
+        },
+        "HVBatInstantCurrent": {
+          "generic_name": "batteryInstantCurrent_A",
+          "bit_start": 12,
+          "bit_size": 12,
+          "factor": 0.25,
+          "offset": -500,
+          "send_same": false
+        }
+      }
+    },
+    "0x597": {
+      "signals": {
+        "BCBTempAlert": {
+          "generic_name": "chargerTempAlert",
+          "bit_start": 0,
+          "bit_size": 2,
+          "states": {
+            "OK" : [0],
+            "ALERT: High Temp"  : [1],
+            "ALERT: Over Temp"  : [2],
+            "INVALID" : [3]
+          },
+          "send_same": false
+        },
+        "RST_BCB_State": {
+          "generic_name": "chargerStatus",
+          "bit_start": 9,
+          "bit_size": 2,
+          "states": {
+            "Idle" : [0],
+            "Charging"  : [1],
+            "Charge ended"  : [2],
+            "INVALID" : [3]
+          },
+          "send_same": false
+        },
+        "RST_InternalBCBTemp": {
+          "generic_name": "chargerTemp_C",
+          "bit_start": 56,
+          "bit_size": 8,
+          "offset": -40,
+          "send_same": false
+        }
+      }
+    },
+    "0x599": {
+      "signals": {
+        "DistanceTotalizer_84": {
+          "generic_name": "odometer_km",
+          "bit_start": 8,
+          "bit_size": 24,
+          "send_same": false
+        },
+        "RST_Displayed_Autonomy": {
+          "generic_name": "autonomy_km",
+          "bit_start": 40,
+          "bit_size": 8,
+          "send_same": false
+        }
+      }
+    },
+    "0x196": {
+      "signals": {
+        "PEBTorque": {
+          "generic_name": "torque_nm",
+          "bit_start": 24,
+          "bit_size": 9,
+          "offset": -254,
+          "send_same": false
+        }
+      }
+    },
+    "0x19F": {
+      "signals": {
+        "ElecMachineSpeed": {
+          "generic_name": "rpm",
+          "bit_start": 16,
+          "bit_size": 12,
+          "factor": 10,
+          "offset": -20000,
+          "send_same": false
+        }
+      }
+    },
+    "0x69F": {
+      "signals": {
+        "VehicleID": {
+          "generic_name": "vehicleID",
+          "bit_start": 0,
+          "bit_size": 32,
+          "send_same": true
+        }
+      }
+    },
+    "0x424": {
+      "signals": {
+        "GeneratedPower": {
+          "generic_name":"batteryGeneratedPower_kW",
+          "bit_start": 16,
+          "bit_size": 8,
+          "factor": 0.5,
+          "send_same": false
+        },
+        "AvailablePower": {
+          "generic_name":"batteryAvailablePower_kW",
+          "bit_start": 24,
+          "bit_size": 8,
+          "factor": 0.5,
+          "send_same": false
+        },
+        "HVBatteryTemp": {
+          "generic_name": "batteryTemperature_C",
+          "bit_start": 33,
+          "bit_size": 7,
+          "offset": -40,
+          "send_same": false
+        },
+        "HVBatHealt": {
+          "generic_name": "batteryHealtPercentage",
+          "bit_start": 41,
+          "bit_size": 7,
+          "send_same": false
+        },
+        "HVBatteryMaxTemp": {
+          "generic_name": "batteryMaxTemperature_C",
+          "bit_start": 57,
+          "bit_size": 7,
+          "offset": -40,
+          "send_same": false
+        }
+      }
+    }
+  }
+}

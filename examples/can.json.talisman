@@ -1,0 +1,52 @@
+{
+  "max_frequency": 2,
+  "force_send_changed": false,
+  "messages": {
+    "0x549": {
+      "max_frequency": 1,
+      "signals": {
+        "PressureRL": {
+          "generic_name": "pressure_rl",
+          "bit_start": 32,
+          "bit_size": 8,
+          "factor": 30,
+          "send_same": true 
+        }, "PressureRR": {
+          "generic_name": "pressure_rr",
+          "bit_start": 40,
+          "bit_size": 8,
+          "factor": 30,
+          "send_same": true 
+        }
+      }
+    },
+    "0x573": {
+      "max_frequency": 1,
+      "signals": {
+        "DistanceTotalizer": {
+          "generic_name": "mileage",
+          "bit_start": 0,
+          "bit_size": 28,
+          "factor": 0.01,
+          "send_same": false 
+        }
+      }
+    },
+    "0x44E": {
+      "signals": {
+        "FuelTank": {
+          "generic_name": "tank_level",
+          "bit_start": 33,
+          "bit_size": 7,
+          "send_same": true
+        },
+	"ExternalTempDisplayValue": {
+          "generic_name": "out_temp",
+          "bit_start": 48,
+          "bit_size": 8,
+          "send_same": true
+	}	
+      }
+    }
+  }
+}

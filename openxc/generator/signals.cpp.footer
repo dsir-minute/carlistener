@@ -1,0 +1,43 @@
+CanCommand* openxc::signals::getCommands() {
+    return COMMANDS[getActiveMessageSet()->index];
+}
+
+int openxc::signals::getCommandCount() {
+    return getActiveMessageSet()->commandCount;
+}
+
+CanMessageDefinition* openxc::signals::getMessages() {
+    return CAN_MESSAGES[getActiveMessageSet()->index];
+}
+
+int openxc::signals::getMessageCount() {
+    return getActiveMessageSet()->messageCount;
+}
+
+CanSignal* openxc::signals::getSignals() {
+    return SIGNALS[getActiveMessageSet()->index];
+}
+
+int openxc::signals::getSignalCount() {
+    return getActiveMessageSet()->signalCount;
+}
+
+CanBus* openxc::signals::getCanBuses() {
+    return CAN_BUSES[getActiveMessageSet()->index];
+}
+
+int openxc::signals::getCanBusCount() {
+    return getActiveMessageSet()->busCount;
+}
+
+CanMessageSet* openxc::signals::getActiveMessageSet() {
+    return &MESSAGE_SETS[getConfiguration()->messageSetIndex];
+}
+
+CanMessageSet* openxc::signals::getMessageSets() {
+    return MESSAGE_SETS;
+}
+
+int openxc::signals::getMessageSetCount() {
+    return MESSAGE_SET_COUNT;
+}
